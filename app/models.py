@@ -14,6 +14,7 @@ from datetime import datetime
 
 # db=SQLAlchemy(app)
 
+
 class User(UserMixin,db.Model):
 
     def __init__(self,**Kwargs):
@@ -78,9 +79,11 @@ class User(UserMixin,db.Model):
         self.last_seen=datetime.utcnow()
         db.session.add(self)
 
+
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
+
 
 class Role(db.Model):
     __tablename__ = 'roles'
@@ -88,7 +91,7 @@ class Role(db.Model):
     name = db.Column(db.String(64), unique=True)
     default=db.Column(db.Boolean,default=False,index=True)
     permissions = db.Column(db.Integer)
-    user = db.relationship('User',backref='role',lazy='dynamic')
+    user = db.relationship('User', backref='role', lazy='dynamic')
 
     @staticmethod
     def insert_roles():
@@ -116,12 +119,14 @@ class Role(db.Model):
             db.session.add(role)
         db.session.commit()
 
+
 class Post(db.Model):
     __tablename__='posts'
     id=db.Column(db.Integer,primary_key=True)
     body=db.Column(db.TEXT)
     timestamp=db.Column(db.DATETIME,index=True,default=datetime.utcnow)
     author_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+
 
 class Permission:
     FOLLOW=0x01
@@ -139,3 +144,15 @@ class AnonymousUser(AnonymousUserMixin):
         return False
 
 login_manager.anonymous_user=AnonymousUser
+
+
+# class Txt(db.Model):
+#     __tablename__ = 'txts'
+#     id = db.Column(db.Integer, primary_key=True)
+#     content = db.Column(db.TEXT)
+#
+#
+# class Label(db.Model):
+#     __tablename__ = 'labels'
+#     id = db.Column(db.Integer, primary_key=True)
+#     txt_id = db.Column(db.Integer, db.ForeignKey('txts.id'))

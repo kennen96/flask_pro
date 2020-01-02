@@ -7,5 +7,23 @@
 <div class="page-header">
 
 </div>
-{{ wtf.quick_form(form) }}
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+    var a = 1;
+    $.ajax({
+            type: "Get",
+            url: "/tag",
+            success: function(data){
+            a = data;
+
+            }
+        })
+</script>
+
+<!--{{ wtf.quick_form(form) }}-->
+<form method = 'POST'>
+
+</form>
 {% endblock %}

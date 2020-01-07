@@ -146,13 +146,28 @@ class AnonymousUser(AnonymousUserMixin):
 login_manager.anonymous_user=AnonymousUser
 
 
-# class Txt(db.Model):
-#     __tablename__ = 'txts'
-#     id = db.Column(db.Integer, primary_key=True)
-#     content = db.Column(db.TEXT)
-#
-#
-# class Label(db.Model):
-#     __tablename__ = 'labels'
-#     id = db.Column(db.Integer, primary_key=True)
-#     txt_id = db.Column(db.Integer, db.ForeignKey('txts.id'))
+class Tag(db.Model):
+    __tablename__ = 'tags'
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.TEXT)
+
+
+class Txt(db.Model):
+    __tablename__ = 'txts'
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.TEXT, unique=True)
+
+
+class TxtLabel(db.Model):
+    __tablename__ = 'txt_label'
+    id = db.Column(db.Integer, primary_key=True)
+    txt_id = db.Column(db.Integer, db.ForeignKey('txts.id'))
+    label_id = db.Column(db.Integer, db.ForeignKey('labels.id'))
+
+
+class Label(db.Model):
+    __tablename__ = 'labels'
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.TEXT)
+    tag_id = db.Column(db.Integer, db.ForeignKey('tags.id'))
+

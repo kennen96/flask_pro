@@ -5,7 +5,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testt.py" beforeDir="false" afterPath="$PROJECT_DIR$/testt.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +46,21 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/main" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\v-junlia\flask_pro\app\templates" />
-      <recent name="E:\v-junlia\flask_pro\app\main" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\v-junlia\flask_pro" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\v-junlia\flask_pro\app\main" />
+      <recent name="E:\v-junlia\flask_pro\app\templates" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.manage">
+  <component name="RunManager" selected="Python.testt (1)">
     <configuration name="app_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask_pro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,6 +125,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="testt (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="flask_pro" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/app/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app/main/testt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="testt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="flask_pro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,6 +190,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.testt (1)" />
         <item itemvalue="Python.manage" />
         <item itemvalue="Python.testt" />
         <item itemvalue="Python.app_test" />
@@ -212,30 +239,30 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="500" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1577773645518" />
-    <state width="1362" height="189" key="GridCell.Tab.0.bottom" timestamp="1577954184452">
+    <state width="1362" height="189" key="GridCell.Tab.0.bottom" timestamp="1578388032678">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1362" height="189" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1577954184452" />
-    <state width="1362" height="189" key="GridCell.Tab.0.center" timestamp="1577954184452">
+    <state width="1362" height="189" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1578388032678" />
+    <state width="1362" height="189" key="GridCell.Tab.0.center" timestamp="1578388032678">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1362" height="189" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1577954184452" />
-    <state width="1362" height="189" key="GridCell.Tab.0.left" timestamp="1577954184452">
+    <state width="1362" height="189" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1578388032678" />
+    <state width="1362" height="189" key="GridCell.Tab.0.left" timestamp="1578388032678">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1362" height="189" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1577954184452" />
-    <state width="1362" height="189" key="GridCell.Tab.0.right" timestamp="1577954184452">
+    <state width="1362" height="189" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1578388032678" />
+    <state width="1362" height="189" key="GridCell.Tab.0.right" timestamp="1578388032678">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1362" height="189" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1577954184452" />
-    <state x="221" y="73" key="SettingsEditor" timestamp="1577684427393">
+    <state width="1362" height="189" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1578388032678" />
+    <state x="221" y="73" key="SettingsEditor" timestamp="1578040110393">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="221" y="73" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1577684427393" />
-    <state x="415" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1577761535932">
+    <state x="221" y="73" key="SettingsEditor/0.0.1440.860@0.0.1440.860" timestamp="1578040110393" />
+    <state x="415" y="254" key="com.intellij.ide.util.TipDialog" timestamp="1578377889432">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="415" y="254" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1577761535932" />
+    <state x="415" y="254" key="com.intellij.ide.util.TipDialog/0.0.1440.860@0.0.1440.860" timestamp="1578377889432" />
     <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1577779361502">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

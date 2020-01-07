@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
+{% import "admin_page.html" as pg %}
+{{ pg.page(page_data,'admin.tag_list') }}
 
 {% block title %}Flasky{% endblock %}
 
@@ -8,22 +10,76 @@
 
 </div>
 
-
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-<script type="text/javascript">
-    var a = 1;
-    $.ajax({
-            type: "Get",
-            url: "/tag",
-            success: function(data){
-            a = data;
+<script>
+    alert("hello")
 
-            }
-        })
 </script>
 
-<!--{{ wtf.quick_form(form) }}-->
-<form method = 'POST'>
+<!--{{ form }}-->
+{{ wtf.quick_form(form) }}
+<script>
+    data = {'tag':'hello'}
+    var a = 1;
+    $.ajax({
+            type: "Post",
+            url: "/tag",
+            data:data,
+            success: function(data){
+            a = data;
+            }
+        })
+                $.fn.serializeObject = function () {
+var ct = this.serializeArray();
+var obj = {};
+    $.each(ct, function () {
+        if (obj[this.name] !== undefined) {
+            if (!obj[this.name].push) {
+                obj[this.name] = [obj[this.name]];
+            }
+            obj[this.name].push(this.value || "");
+        } else {
+            obj[this.name] = this.value || "";
+        }
+    });
+    return obj;
+};
 
+</script>
+
+<tbody>
+<tr>
+    <th>文本</th>
+
+</tr>
+
+{% for v in page_data %}
+<tr>
+    <td>
+        {{ v.content }}
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+
+<form action="{{ url_for('main.lead_out') }}" method="post">
+<!--<form action=alert("form") method="post">-->
+
+{% for foo in page_data %}
+    <input type="checkbox" name="fid" value="{{ foo.content }}">
+    {{ foo.content }}
+    <br>
+{% endfor %}
+<input type="text" name="firstid">
+<input type="submit" value="导出">
 </form>
+
 {% endblock %}
+
+
+document.getElementById("submit").οnclick=function(){
+var us = $("#form").serializeObject();
+console.log(us)
+alert("world");
+}
+

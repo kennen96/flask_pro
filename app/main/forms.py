@@ -30,7 +30,7 @@ class TtForm(FlaskForm):
     tag1 = {'domain': selcity('domain'),
             'gender': ['domain', 'gender', 'age'],
             'age': ['domain', 'gender', 'age']}
-    tags = [RadioField(tag, choices=[x for x in enumerate(label)], render_kw={"class":"radio-inline"})
+    tags = [RadioField(tag, choices=[x for x in enumerate(label)], render_kw={"class": "radio-inline"})
             for tag, label in tag1.items()]
 
     for i, s in enumerate(tags):

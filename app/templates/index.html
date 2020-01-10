@@ -13,11 +13,32 @@
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script>
     alert("hello")
-
 </script>
 
-<!--{{ form }}-->
-{{ wtf.quick_form(form) }}
+<form action="{{ url_for('main.index') }}" method="post">
+{% for tag, labels in tags.items() %}
+    {{ tag }}
+    {% for label in labels %}
+    <input type="checkbox" name="{{ tag }}" value="{{ label.content }}">
+    {{ label.content }}
+    {% endfor %}
+<!--    <form action="{{ url_for('main.add_label') }}" method="post">-->
+<!--    <input type="text" name="add_label">-->
+<!--    <input type="submit" value="添加">-->
+<!--    </form>-->
+    <br>
+{% endfor %}
+<input type="submit" value="查询">
+</form>
+
+<!--<form action="{{ url_for('main.add_tag') }}" method="post">-->
+<!--<input type="text" name="add_tag">-->
+<!--<input type="submit" value="添加">-->
+<!--</form>-->
+
+
+
+
 <script>
     data = {'tag':'hello'}
     var a = 1;
@@ -47,39 +68,49 @@ var obj = {};
 
 </script>
 
-<tbody>
-<tr>
-    <th>文本</th>
+<!--<tbody>-->
+<!--<tr>-->
+<!--    <th>文本</th>-->
 
-</tr>
+<!--</tr>-->
 
-{% for v in page_data %}
-<tr>
-    <td>
-        {{ v.content }}
-    </td>
-</tr>
-{% endfor %}
-</tbody>
+<!--{% for v in page_data %}-->
+<!--<tr>-->
+<!--    <td>-->
+<!--        {{ v.content }}-->
+<!--    </td>-->
+<!--</tr>-->
+<!--{% endfor %}-->
+<!--</tbody>-->
 
 <form action="{{ url_for('main.lead_out') }}" method="post">
-<!--<form action=alert("form") method="post">-->
 
 {% for foo in page_data %}
     <input type="checkbox" name="fid" value="{{ foo.content }}">
     {{ foo.content }}
+<!--    <input type="checkbox" name="fid" value="{{ foo.content }}">-->
     <br>
 {% endfor %}
 <input type="text" name="firstid">
 <input type="submit" value="导出">
 </form>
 
+当前页数：{{ paginate.page }}
+    总页数：{{ paginate.pages }}
+    一共有{{ paginate.total }}条数据
+    <br>
+
+    {% if paginate.has_prev %}
+        <a href="/?page={{ paginate.prev_num }}">上一页</a>
+    {% endif %}
+
+    {% for i in paginate.iter_pages(1,1,3,1) %}
+        <a href="/?page={{ i }}">{{ i }}</a>
+    {% endfor %}
+
+    {% if paginate.has_next %}
+        <a href="/?page={{ paginate.next_num }}">下一页</a>
+    {% endif %}
+
 {% endblock %}
-
-
-document.getElementById("submit").οnclick=function(){
-var us = $("#form").serializeObject();
-console.log(us)
-alert("world");
-}
 

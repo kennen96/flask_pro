@@ -1,6 +1,8 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, RadioField
 from wtforms.validators import DataRequired
+from ..models import *
+from . import main
 
 
 class NameForm(FlaskForm):
@@ -25,18 +27,20 @@ def selcity(city):
     return ['domain', 'gender', 'ageee']
 
 
-class TtForm(FlaskForm):
-    tags = ['domain', 'gender', 'age']
-    tag1 = {'domain': selcity('domain'),
-            'gender': ['domain', 'gender', 'age'],
-            'age': ['domain', 'gender', 'age']}
-    tags = [RadioField(tag, choices=[x for x in enumerate(label)], render_kw={"class": "radio-inline"})
-            for tag, label in tag1.items()]
-
-    for i, s in enumerate(tags):
-        locals()['field' + str(i)] = s
-    del locals()['s']
-    submit = SubmitField('Submit')
+# class TtForm(FlaskForm):
+#     # tags = ['domain', 'gender', 'age']
+#     tags = Txt.query.all()
+#     # tag1 = {'domain': selcity('domain'),
+#     #         'gender': ['domain', 'gender', 'age'],
+#     #         'age': ['domain', 'gender', 'age']}
+#     tag1 = {tag: selcity(tag) for tag in tags}
+#     tags = [RadioField(tag, choices=[x for x in enumerate(label)], render_kw={"class": "radio-inline"})
+#             for tag, label in tag1.items()]
+#
+#     for i, s in enumerate(tags):
+#         locals()['field' + str(i)] = s
+#     del locals()['s']
+#     submit = SubmitField('Submit')
 
 
 
